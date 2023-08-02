@@ -1,0 +1,305 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 1,
+    "pending": 0,
+    "failures": 7,
+    "start": "2022-11-08T16:20:02.990Z",
+    "end": "2022-11-08T16:20:15.024Z",
+    "duration": 6255,
+    "testsRegistered": 8,
+    "passPercent": 12.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7669e9e4-f476-4777-9b14-d9e2e8de53c6",
+      "title": "",
+      "fullFile": "cypress/integration/Produtos.spec.js",
+      "file": "cypress/integration/Produtos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f5fab000-98df-4d58-81c2-bde318679ecd",
+          "title": "Testes da funcionalidades produtos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve validar contrato de produtos",
+              "fullTitle": "Testes da funcionalidades produtos Deve validar contrato de produtos",
+              "timedOut": null,
+              "duration": 943,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('http://localhost:3000/produtos').then(respose => {\n  return _produtos.default.validateAsync(respose.body);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\support\\index.js:133:5)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "b464126d-0b8a-4027-af39-a0c57e36af38",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Listar produtos",
+              "fullTitle": "Testes da funcionalidades produtos Listar produtos",
+              "timedOut": null,
+              "duration": 790,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'Get',\n  url: 'http://localhost:3000/produtos'\n}).then(response => {\n  expect(response.body.produtos[1].nome).to.equal('Samsung 60 polegadas');\n  expect(response.status).to.equal(200);\n  expect(response.body).to.have.property('produtos');\n  expect(response.duration).to.be.lessThan(25);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\integration\\Produtos.spec.js:168:8)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "6d327347-e9e4-4550-8bac-4328773962ce",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastrar produtos",
+              "fullTitle": "Testes da funcionalidades produtos Cadastrar produtos",
+              "timedOut": null,
+              "duration": 1027,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let produto = `Produto Debora ${Math.floor(Math.random() * 1000000)}`;\ncy.request({\n  method: 'Post',\n  url: 'http://localhost:3000/produtos',\n  body: {\n    \"nome\": produto,\n    \"preco\": 50,\n    \"descricao\": \"Mousee\",\n    \"quantidade\": 150\n  },\n  headers: {\n    authorization: token\n  }\n}).then(response => {\n  expect(response.body.message).to.be.equal('Cadastro realizado com sucesso');\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\integration\\Produtos.spec.js:180:8)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "3c03371c-0f7b-4fee-a627-b5a258280b87",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve validar mensagem de erro ao cadastrar produto repetido",
+              "fullTitle": "Testes da funcionalidades produtos Deve validar mensagem de erro ao cadastrar produto repetido",
+              "timedOut": null,
+              "duration": 857,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.cadastrarProduto(token, 'Produto Debora 1', '230', 'descricao do produto novo', '140').then(response => {\n  expect(response.body.message).to.be.equal('Já existe produto com esse nome');\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\support\\index.js:138:6)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "7fb8552d-01f5-4bd9-9951-516ed55c1763",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve editar um produto ja cadastrado",
+              "fullTitle": "Testes da funcionalidades produtos Deve editar um produto ja cadastrado",
+              "timedOut": null,
+              "duration": 840,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('http://localhost:3000/produtos').then(response => {\n  let id = response.body.produtos[0]._id;\n  cy.request({\n    method: 'Put',\n    url: `http://localhost:3000/produtos/${id}`,\n    headers: {\n      authorization: token\n    },\n    body: {\n      \"nome\": \"Produto Debora 2\",\n      \"preco\": 500,\n      \"descricao\": \"produto editado\",\n      \"quantidade\": 200\n    }\n  }).then(response => {\n    expect(response.body.message).to.equal('Registro alterado com sucesso');\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\integration\\Produtos.spec.js:202:8)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "2b407f73-017d-470a-a065-dd8a03addfc6",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve editar um produto cadastrado previamente",
+              "fullTitle": "Testes da funcionalidades produtos Deve editar um produto cadastrado previamente",
+              "timedOut": null,
+              "duration": 855,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let produto = `Produto ${Math.floor(Math.random() * 1000000)}`;\ncy.cadastrarProduto(token, produto, 230, \"descricao do produto novo\", 140).then(response => {\n  let id = response.body._id;\n  cy.request({\n    method: 'Put',\n    url: `http://localhost:3000/produtos/${id}`,\n    headers: {\n      authorization: token\n    },\n    body: {\n      \"nome\": \"Produto editado 1\",\n      \"preco\": 10,\n      \"descricao\": \"produto editado\",\n      \"quantidade\": 1000\n    }\n  }).then(response => {\n    expect(response.body.message).to.equal('Registro alterado com sucesso');\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\support\\index.js:138:6)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "ccb4fc7b-630f-4ae7-808b-713e7d79cfcb",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve deletar um produto previamente cadastrado",
+              "fullTitle": "Testes da funcionalidades produtos Deve deletar um produto previamente cadastrado",
+              "timedOut": null,
+              "duration": 826,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let produto = `Produto ${Math.floor(Math.random() * 1000000)}`;\ncy.cadastrarProduto(token, produto, 230, \"descricao do produto novo\", 140).then(response => {\n  let id = response.body._id;\n  cy.request({\n    method: 'Delete',\n    url: `http://localhost:3000/produtos/${id}`,\n    headers: {\n      authorization: token\n    }\n  }).then(response => {\n    expect(response.body.message).to.equal('Registro excluído com sucesso');\n    expect(response.status).to.equal(200);\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttp://localhost:3000/produtos\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/produtos\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:160341:78\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:61962/__cypress/runner/cypress_runner.js:8335:37\n    at tryCatcher (http://localhost:61962/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61962/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:61962/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:61962/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:61962/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:61962/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:61962/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:61962/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61962/__cypress/tests?p=cypress\\support\\index.js:138:6)\n\nFrom Node.js Internals:\n  RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000\n      at new RequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n      at Request.plumbing.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n      at Request.RP$callback [as _callback] (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n      at self.callback (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:183:22)\n      at Request.emit (node:events:394:28)\n      at Request.onRequestError (C:\\Users\\adminitsd\\AppData\\Local\\Cypress\\Cache\\9.3.1\\Cypress\\resources\\app\\node_modules\\@cypress\\request\\request.js:869:8)\n      at ClientRequest.emit (node:events:406:35)\n      at Socket.socketErrorListener (node:_http_client:447:9)\n      at Socket.emit (node:events:394:28)\n      at emitErrorNT (node:internal/streams/destroy:157:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n      at processTicksAndRejections (node:internal/process/task_queues:83:21)\n  ",
+                "diff": null
+              },
+              "uuid": "6e93f26e-f63a-4569-8125-85bbe90f259d",
+              "parentUUID": "f5fab000-98df-4d58-81c2-bde318679ecd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b464126d-0b8a-4027-af39-a0c57e36af38",
+            "6d327347-e9e4-4550-8bac-4328773962ce",
+            "3c03371c-0f7b-4fee-a627-b5a258280b87",
+            "7fb8552d-01f5-4bd9-9951-516ed55c1763",
+            "2b407f73-017d-470a-a065-dd8a03addfc6",
+            "ccb4fc7b-630f-4ae7-808b-713e7d79cfcb",
+            "6e93f26e-f63a-4569-8125-85bbe90f259d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6138,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7705b2f4-727b-497d-b102-39e2153197ae",
+      "title": "",
+      "fullFile": "cypress/integration/1-getting-started/Login.spec.js",
+      "file": "cypress/integration/1-getting-started/Login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81f61b2c-95e2-465a-9565-bc13a6336c18",
+          "title": "Login - Testes da API ServRest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer o login com sucesso  ",
+              "fullTitle": "Login - Testes da API ServRest Deve fazer o login com sucesso  ",
+              "timedOut": null,
+              "duration": 117,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'Post',\n  url: 'http://localhost:3000/login',\n  body: {\n    \"email\": \"fulano@qa.com\",\n    \"password\": \"teste\"\n  }\n}).then(response => {\n  expect(response.body.message).to.be.equal('Login realizado com sucesso');\n  cy.log(response.body.authorization);\n});",
+              "err": {},
+              "uuid": "63eaf1c5-803c-4c80-918d-95fd78220334",
+              "parentUUID": "81f61b2c-95e2-465a-9565-bc13a6336c18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63eaf1c5-803c-4c80-918d-95fd78220334"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 117,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "jason": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
