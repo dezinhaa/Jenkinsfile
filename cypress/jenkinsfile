@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clocar o repositoorio') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Dezinha1/aula-ebac-ui.git'
+                echo 'Hello World'
+            }
+        }
+    stage('Instalar as dependencias') {
+            steps {
+                sh 'npm install'
+                
+            }
+        }
+        stage('Executar testes') {
+            steps {
+                sh NO_COLOR=1 'npm rum cy:run'
+                echo 'Hello World'
+            }
+        }
+}
